@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=11">
+<title>Grad16 Surevey</title>
+    <link rel="stylesheet" type="text/css" href="../css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <link rel="stylesheet" type="text/css" href="../css/color.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../image/icon.png" />
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../js/commons.js"></script>
+  
+    
+</head>
+<body onLoad="initTimeOut()" bgcolor="#EAEAEA">
+
+	
+	<!-- Margins are in order -[Top, Right, Bottom, Left] -->
+	<!-- Region Name and Username will be added in the div below-->
+	<div id="upperMargin"   style="width:auto;height:70px;">
+                	
+    </div>
+	<!-- Home Panel -->
+	<div style="margin:0px 90px" align="center">
+		<div id="mainForm" class="easyui-panel" title="Grad 2016 Surevey" style="width:1300px;height:670px;padding:0px 0px" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                
+            <div class="easyui-layout" data-options="fit:true,cls:'c8'">
+            
+			<!-- Left partition____________________________________________________ -->
+            <div data-options="region:'west',cls:'c8'" style="width:220px;height:550px;padding:0px;border:none">
+                <div id="feedDefSelect" class="easyui-panel" align="right" title="" style="width:auto;height:50px;padding-right:5px;" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                	Full Name
+            	</div>
+            	<div id="TeamDesc" class="easyui-panel" align="right" title="" style="width:auto;height:50px;padding-right:5px;vertical-align: middle;" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                	Team Name&nbsp;<br>(Please expand acronyms, if any)
+            	</div>
+            	<div id="timingsBuffer" class="easyui-panel" align="right" title="" style="width:auto;height:70px;padding-right:5px;vertical-align: middle;" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                	
+            	</div>
+            	<div id="separate" class="easyui-panel" align="right" title="" style="width:auto;height:10px;padding-right:5px;vertical-align: middle;border:none" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                	
+            	</div>
+            	<div id="projDesc" class="easyui-panel" align="right" title="" style="width:auto;height:60px;padding-right:5px;vertical-align: middle;" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                	Briefly Describe your team's project <br>
+            	</div>
+            	
+            	<div id="contribDesc" class="easyui-panel" align="right" title="" style="width:auto;height:70px;padding-right:5px;vertical-align: middle;" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                	What was your contribution to your team/project ? <br>
+            	</div>
+            	<div id="dayDesc" class="easyui-panel" align="right" title="" style="width:auto;height:60px;padding-right:5px;vertical-align: middle;" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                	What was your typical working day like ?
+            	</div>
+            	<div id="separate" class="easyui-panel" align="right" title="" style="width:auto;height:10px;padding-right:5px;vertical-align: middle;border:none" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">	
+            	</div>
+            	
+            	<div id="perksDesc" class="easyui-panel" align="right" title="" style="width:auto;height:55px;padding-right:5px;vertical-align: middle;" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                	Perks of being in your team
+            	</div>
+            	
+            	<div id="consDesc" class="easyui-panel" align="right" title="" style="width:auto;height:55px;padding-right:5px;vertical-align: middle;" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                	Cons of being in your team
+            	</div>
+            	<div id="supportDesc" class="easyui-panel" align="right" title="" style="width:auto;height:55px;padding-right:5px;vertical-align: middle;" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                	Supporting Comments/Remarks <br> (Optional)
+            	</div>
+            	<div id="teamRatingDesc" class="easyui-panel" align="right" title="" style="width:auto;height:40px;padding-right:5px;vertical-align: middle;" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                	Overall team rating<br>(5-Best)
+            	</div>
+            	
+            	<div id="submitButtonBuffer" class="easyui-panel" style="width:auto;height:30px;padding:1px 1px;vertical-align: middle;border:none" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                	
+            	</div>
+            	
+            </div>
+            
+            
+			<!-- Central partition____________________________________________________ -->
+			<div data-options="region:'center'" style="width:900px;padding:0px;border:none">
+            <form id="fmChangeInstrStatus" name="fmChangeInstrStatus">
+            
+            	<div id="intro" class="easyui-panel" title="" style="width:auto;height:50px;padding:1px 1px;" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+                	<div class="fitem" style="margin-bottom:20px;margin-right:50px;float:left;width:300px">
+            			<input id="name" class="easyui-textbox" name="name" style="width:280px;" data-options="
+                    required:true,cls:'c8'">
+                    </div>
+                    
+                    <div id="idDiv" class="fitem" style="margin-bottom:20px;margin-right:40px;float:left;width:250px;">
+                		<!-- <label id=statusCodeLabel>Status Code</label>-->
+            			<input id="id" class="easyui-textbox" name="id" style="width:200px;" data-options="
+                    required:true,label:'ID',cls:'c8'">
+                   </div>
+                    
+                    
+                	
+            	</div>
+            	
+            	<div id="teamNameDiv" class="easyui-panel" title="" style="width:auto;height:50px;padding:1px 1px" data-options="closable:false,
+                	collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+            		<div class="fitem"><input id="teamName" style="width:20%;float:left;" name="teamName" class="easyui-textbox" data-options="required:true,cls:'c8'">            		
+                		&emsp;&emsp;Technologies/Libraries Used
+            			<input id="techs" class="easyui-textbox" name="techs" style="width:50%;" data-options="required:true,cls:'c8'">
+                   </div>
+            	</div>
+            	
+            	<div id="timingsHdr" class="easyui-panel" title="" style="width:auto;height:70px;padding:1px 1px" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,limitToList:true,cls:'c8'">
+            		
+                	<div id="usualTimediv" class="fitem" style="margin-bottom:10px;margin-top:10px;margin-right:30px;float:left;width:220px;">
+                		<label id=usualTimeLabel>Usual Work Timings (eg. 9am-5pm)<br></label>
+            			<input id="usualTime" class="easyui-textbox" name="usualTime" style="width:100px;" data-options="required:true,cls:'c8'">
+                   </div>
+        			
+        			<div id="numHoursDiv" class="fitem" style="margin-bottom:10px;margin-top:10px;margin-right:20px;float:left;width:150px;">
+        			<label id=numHoursLabel>No. of working hours</label>
+            			<input id="numHours" class="easyui-textbox" name="numHours" style="width:50px;"
+            			 data-options="required:true,cls:'c8'">
+                    </div>
+                    
+                    <div id="natureDiv" class="fitem" style="margin-bottom:10px;margin-top:10px;float:left;width:250px;">
+        			<label id=natureLabel>Nature of Work</label>
+            			<input id="nature" class="easyui-combobox" name="nature" style="width:200px;" data-options="
+                    valueField: 'type',textField: 'type',required:true,editable:false,cls:'c8',data:[{type:'Development'},{type:'Testing'},{type:'Other'}]">
+                    </div>
+        			
+        			<div id="pressureDiv" class="fitem" style="margin-bottom:10px;margin-top:10px;float:left;width:250px;">
+        			<label id=pressureLabel>Work Pressure (5-Highest)<br></label>
+            			<input id="pressure" class="easyui-combobox" name="pressure" style="width:70px;" data-options="
+                    valueField: 'num',textField: 'num',required:true,editable:false,cls:'c8',data:[{num:'1'},{num:'2'},{num:'3'},{num:'4'},{num:'5'}]">
+                    </div>
+            		
+            	</div>
+            	
+            	<div id="separate" class="easyui-panel" align="right" title="" style="width:auto;height:10px;padding-right:5px;vertical-align: middle;border:none" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">	
+            	</div>
+            	
+            	
+            	<div id="projDiv" class="easyui-panel" title="" style="width:auto;height:60px;padding:1px 1px" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+            		<div id="projData" class="fitem" style="margin-bottom:5px;margin-top:5px;margin-right:30px;margin-left:5px;float:left;width:420px;">
+                		<input id="proj" class="easyui-textbox" name="proj" style="width:250%;" data-options="required:true,multiline:true,cls:'c8'">
+                   </div>
+            	</div>
+            	
+            	<div id="contribDiv" class="easyui-panel" title="" style="width:auto;height:70px;padding:1px 1px" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+            		<div id="contribData" class="fitem" style="margin-bottom:5px;margin-top:5px;margin-right:30px;margin-left:5px;float:left;width:420px;">
+                		<input id="contrib" class="easyui-textbox" name="contrib" style="width:250%;" data-options="required:true,multiline:true,cls:'c8'">
+                   </div>
+            	</div>
+            	
+            	<div id="dayDiv" class="easyui-panel" title="" style="width:auto;height:60px;padding:1px 1px" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+            		<div id="dayData" class="fitem" style="margin-bottom:5px;margin-top:5px;margin-right:30px;margin-left:5px;float:left;width:420px;">
+                		<input id="day" class="easyui-textbox" name="day" style="width:250%;" data-options="required:true,multiline:true,cls:'c8'">
+                   </div>
+            	</div>
+            	
+            	<div id="separate" class="easyui-panel" align="right" title="" style="width:auto;height:10px;padding-right:5px;vertical-align: middle;border:none" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">	
+            	</div>
+            	
+            	<div id="perkDiv" class="easyui-panel" title="" style="width:auto;height:55px;padding:1px 1px" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+            		<div id="perkData" class="fitem" style="margin-bottom:3px;margin-top:3px;margin-right:30px;margin-left:5px;float:left;width:420px;">
+                		<input id="perk" class="easyui-textbox" name="perk" style="width:250%;" data-options="required:true,multiline:true,cls:'c8'">
+                   </div>
+            	</div>
+            	
+            	<div id="consDiv" class="easyui-panel" title="" style="width:auto;height:55px;padding:1px 1px" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+            		<div id="perkData" class="fitem" style="margin-bottom:3px;margin-top:3px;margin-right:30px;margin-left:5px;float:left;width:420px;">
+                		<input id="cons" class="easyui-textbox" name="cons" style="width:250%;" data-options="required:true,multiline:true,cls:'c8'">
+                   </div>
+            	</div>
+            	
+            	<div id="supportDiv" class="easyui-panel" title="" style="width:auto;height:55px;padding:1px 1px" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+            		<div id="supportData" class="fitem" style="margin-bottom:3px;margin-top:3px;margin-right:30px;margin-left:5px;float:left;width:420px;">
+                		<input id="support" class="easyui-textbox" name="support" style="width:250%;" data-options="multiline:true,cls:'c8'">
+                   </div>
+            	</div>
+            	
+            	<div id="teamRatingDiv" class="easyui-panel" title="" style="width:auto;height:40px;padding:1px 1px" data-options="closable:false,
+                collapsible:false,minimizable:false,maximizable:false,closed:false,cls:'c8'">
+            		 <div id="teamRatingData" class="fitem" style="margin-bottom:3px;margin-top:3px;margin-right:30px;margin-left:5px;float:left;width:420px;">
+                		<input id="teamRating" class="easyui-combobox" name="teamRating" style="width:125%;" data-options="valueField: 'num',textField: 'num',
+                		required:true,editable:false,cls:'c8',data:[{num:'1'},{num:'2'},{num:'3'},{num:'4'},{num:'5'}]">
+                   </div>
+            	</div>
+            	
+            	<!-- submit button -->
+            	<div align="center" ><a href="#" class="easyui-linkbutton c8" style="width:100px" iconCls="icon-ok" onclick="validateForm()">Send</a></div>
+            	
+            </form>	
+            
+            </div>
+            
+		</div>
+		</div>
+	</div>
+	<!-- Main panel ends here__________________________________________________________________ -->
+	
+	<div id="loading" class="easyui-window" title="" style="height:145px;border:none;width:200px;align:center;" data-options="resizable:false,maximizable:false,minimizable:false,collapsible:false,closable:false,modal:true,closed:true" 
+	 >
+       <img src="../image/loading.gif">
+    </div>
+	<!-- signature -->
+	<div><p style="float:right;margin-right:180px;font-size:12px;">Author - Saransh Kejriwal (SK28838)</p></div>
+	
+</body>
+
+
+<!-- Script to check that home isn't accessed without login -->
+<script type="text/javascript">
+function verifyLogin(){
+	
+	var locUId=sessionStorage.GMDuserId;
+	//remember to clear this value at logout
+	if(locUId==null){
+		//show unauth access message
+		$.messager.show({
+	        title:'',
+	        msg:'Unauthorized access detected. Moving to login',
+	        timeout:3000,//3 seconds
+	        showType:'slide',
+	        style:{
+	            right:'',
+	            bottom:''
+	        }
+	    });
+		
+		window.location.replace("adminlogin.html"); //redirect to login page
+	}
+	loadInstrStatusChangePage();
+}
+</script>
+
+<!--to select when Enter is pressed-->
+<script type="text/javascript">
+
+	$(document).keypress(function(event){
+		var keycode = (event.keyCode ? event.keyCode : event.which);
+		if(keycode == '13'){
+			validateForm();
+			
+		}
+	});
+
+</script>
+
+<!-- Script for confirmation dialog box -->
+
+
+<!-- Script to submit req -->
+<script type="text/javascript">
+function validateForm(){
+	if($('#fmChangeInstrStatus').form('validate')){
+		submitEntry();
+	}else{
+		//alert("invalid");
+	}
+}
+
+function submitEntry(){
+	var url = "../surevey";
+	
+	var name=document.getElementById('name').value;
+	var id=document.getElementById('id').value;
+	var teamName=document.getElementById('teamName').value;
+	var techs=document.getElementById('techs').value;
+	var usualTime=document.getElementById('usualTime').value;
+	var numHours=document.getElementById('numHours').value;
+	var nature=$('#nature').combobox('getValue');
+	var pressure=$('#pressure').combobox('getValue');
+	var proj=document.getElementById('proj').value;
+	var contrib=document.getElementById('contrib').value;
+	var day=document.getElementById('day').value;
+	var perk=document.getElementById('perk').value;
+	var cons=document.getElementById('cons').value;
+	var support=document.getElementById('support').value;
+	var teamRating=$('#teamRating').combobox('getValue');
+   
+    
+	//set 'src' param to loginReq
+	var params = "name="+name+"&id="+id+"&teamName="+teamName+"&techs="+techs+"&usualTime="+usualTime+"&numHours="+numHours
+	+"&nature="+nature+"&pressure="+pressure+"&proj="+proj+"&contrib="+contrib+"&day="+day+"&perk="+perk+"&cons="+cons+"&support="+support+"&teamRating="+teamRating;
+	
+	var xmlHttpRequest = getXMLHttpRequest(); 
+	xmlHttpRequest.open("POST", url, true);
+	xmlHttpRequest.onreadystatechange = getInstrStatusChangeResp(xmlHttpRequest);//implemented below
+	xmlHttpRequest.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	xmlHttpRequest.send(params);
+	$('#loading').window('open');
+}
+
+function getInstrStatusChangeResp(xmlHttpRequest){
+	return function() {
+		if (xmlHttpRequest.readyState == 4) {
+			if (xmlHttpRequest.status == 200) {
+				var data = xmlHttpRequest.responseText;//receives from servlet without redirect
+				document.getElementById('loading').innerHTML=data;
+				if(data==""){
+					document.getElementById('loading').innerHTML="You've encountered an exception at server. Please contact Author";
+				}
+				//var jsonData = JSON.parse(data);//data now holds the whole json as a string and jsonData as the object
+				//load JSON data into the datagrid
+				//$('#historyDg').datagrid("loadData",jsonData.rows);//once we have headers with fields, we can load the data
+				//alert(jsonData.total+" rows loaded");
+				//$('#loading').window('close');
+			} 
+			else {
+				alert("HTTP error " + xmlHttpRequest.status + ": "+ xmlHttpRequest.statusText);
+			}
+		}
+	};
+}
+
+function colorStatus(val,row){
+	if (val == "Failed"){
+        return '<span style="color:red;">'+val+'</span>';
+    } else {
+        return '<span style="color:green;">'+val+'</span>';
+    }
+}
+
+</script>
+
+<!-- Script for XmlHttp function -->
+<script type="text/javascript">
+/*
+* creates a new XMLHttpRequest object which is the backbone of AJAX,
+* or returns false if the browser doesn't support it
+*/
+//The XMLHttpRequest object is used to exchange data with a server.
+function getXMLHttpRequest() {
+	var xmlHttpReq = false;
+	// to create XMLHttpRequest object in non-Microsoft browsers
+	if (window.XMLHttpRequest) {
+		xmlHttpReq = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+		try {
+			// to create XMLHttpRequest object in later versions
+			// of Internet Explorer
+			xmlHttpReq = new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (exp1) {
+			try {
+				// to create XMLHttpRequest object in older versions
+				// of Internet Explorer
+				xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (exp2) {
+				xmlHttpReq = false;
+			}
+		}
+	}
+	return xmlHttpReq;
+}
+</script>
+
+</html>
